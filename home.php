@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -44,25 +44,30 @@
     <?php
 
         include "calculadora.php";
-        $num1 = $_GET['num1'];
-        $num2 = $_GET['num2'];
-        $op = $_GET['operacao'];
 
-        if($op == "soma"){
-          echo "O resultado da soma é: ".soma($num1, $num2);
+        if (!empty($_GET["operacao"])) {
 
-        } else if($op == "subtracao"){
-          echo "O resultado da subtração é: ".sub($num1, $num2);
+          $num1 = $_GET['num1'];
+          $num2 = $_GET['num2'];
+          $op = $_GET['operacao'];
 
-        } else if($op == "multiplicacao"){
-          echo "O resultado da multiplicação é: ".mult($num1, $num2);
+          if($op == "soma"){
+            echo "O resultado da soma é: ".soma($num1, $num2);
 
-        } else if($op == "divisao"){
-          if($num2 != 0){
-            echo "O resultado da divisão é: ".div($num1, $num2);
+          } else if($op == "subtracao"){
+            echo "O resultado da subtração é: ".sub($num1, $num2);
 
-          } else {
-            echo "Não é possível realizar divisão por 0";
+          } else if($op == "multiplicacao"){
+            echo "O resultado da multiplicação é: ".mult($num1, $num2);
+
+          } else if($op == "divisao"){
+            if($num2 != 0){
+              echo "O resultado da divisão é: ".div($num1, $num2);
+
+            } else {
+              echo "Não é possível realizar divisão por 0";
+
+            }
 
           }
 

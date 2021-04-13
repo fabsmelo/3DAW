@@ -12,7 +12,7 @@
     return $num1 - $num2;
 
   }
-  Error_reporting (0);
+  
   function mult($num1, $num2){
 
     return $num1*$num2;
