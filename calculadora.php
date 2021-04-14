@@ -23,6 +23,8 @@
 
     }
 
+  } else {
+    echo "Escolha uma operação";
   }
 
 ?>
