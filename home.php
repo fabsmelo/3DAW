@@ -10,7 +10,7 @@
 
       <h1 style="margin-bottom: 50px;">Calculadora</h1>
 
-      <form class="form-row" method="GET" style="margin-bottom: 85px;">
+      <form class="form-row" action="calculadora.php" method="POST" style="margin-bottom: 85px;">
 
           <div class="form-group col-md-6">
             <label for="num1">Primeiro valor</label>
@@ -38,41 +38,7 @@
           </div>
 
       </form>
-      <h4 style="margin: 0 auto; width: 50%;">
-      <?php
 
-          include "calculadora.php";
-
-          if (!empty($_GET["operacao"])) {
-
-            $num1 = $_GET['num1'];
-            $num2 = $_GET['num2'];
-            $op = $_GET['operacao'];
-
-            if($op == "soma"){
-              echo "O resultado da soma é: ".soma($num1, $num2);
-
-            } else if($op == "subtracao"){
-              echo "O resultado da subtração é: ".sub($num1, $num2);
-
-            } else if($op == "multiplicacao"){
-              echo "O resultado da multiplicação é: ".mult($num1, $num2);
-
-            } else if($op == "divisao"){
-              if($num2 != 0){
-                echo "O resultado da divisão é: ".div($num1, $num2);
-
-              } else {
-                echo "Não é possível realizar divisão por 0";
-
-              }
-
-            }
-
-          }
-
-      ?>
-    </h4>
     </div>
 
   </body>
