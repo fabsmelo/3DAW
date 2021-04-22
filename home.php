@@ -6,11 +6,11 @@
     <title>Calculadora</title>
   </head>
   <body>
-    <div div class="mx-auto" style="width: 600px;">
+    <div class="mx-auto" style="width: 600px;">
 
       <h1 style="margin-bottom: 50px;">Calculadora</h1>
 
-      <form class="form-row" action="calculadora.php" method="POST" style="margin-bottom: 85px;">
+      <form class="form-row" method="POST" action="calculadora.php" style="margin-bottom: 85px;">
 
           <div class="form-group col-md-6">
             <label for="num1">Primeiro valor</label>
@@ -18,7 +18,7 @@
           </div>
 
           <div class="form-group col-md-6" style="margin-bottom: 40px;">
-            <label for="num2">Segundo valor</label>
+            <label for="num2">Segundo valor (%)</label>
             <input type="text" class="form-control num2" id="num2" name="num2" placeholder="Insira um numero">
           </div>
 
@@ -30,6 +30,10 @@
               <option value="subtracao">Subtração</option>
               <option value="multiplicacao">Multiplicação</option>
               <option value="divisao">Divisão</option>
+              <option value="exponenciacao">Exponenciação</option>
+              <option value="raizQ">Raiz Quadrada (apenas 1 número)</option>
+              <option value="sobx">Divisão de ¹/x (apenas 1 número)</option>
+              <option value="porcentagem">Porcentagem(1º campo valor inteiro, 2º campo porcentagem)</option>
             </select>
           </div>
 
@@ -42,4 +46,5 @@
     </div>
 
   </body>
+
 </html>
